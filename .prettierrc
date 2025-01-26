@@ -1,0 +1,12 @@
+{
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "tabWidth": 4,
+    "useTabs": false,
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindAttributes": ["class", "className"],
+    "tailwindFunctions": ["clsx", "cn"]
+  }
+  
