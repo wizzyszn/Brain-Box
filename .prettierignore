@@ -1,0 +1,60 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# production
+/dist
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# vite specific
+/.vite
+.vite
+/vite.config.ts
+
+# npm & lock files
+package-lock.json
+pnpm-lock.yaml
+
+# files ignored by Prettier
+**/*.yml
+**/*.md
+**/*.json
+.prettierrc
+postcss.config.js
+.eslintrc.json
+next.config.js
+tailwind.config.ts
+tsconfig.json
+vite.config.ts
+
+# Prettier should not format README.md and other markdown files
+README.md
+
+# other config files
+prettier.config.js
+babel.config.js
