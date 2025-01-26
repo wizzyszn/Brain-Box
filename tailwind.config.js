@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ["class"],
-    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
     theme: {
         extend: {
             borderRadius: {
@@ -49,6 +49,22 @@ module.exports = {
                     3: "hsl(var(--chart-3))",
                     4: "hsl(var(--chart-4))",
                     5: "hsl(var(--chart-5))",
+                },
+                txt: {
+                    1: "var(--clr-txt-1)",
+                    2: "var(--clr-txt-2)",
+                    3: "var(--clr-txt-3)",
+                    4: "var(--clr-txt-4)",
+                    5: "var(--clr-txt-7)",
+                    6: "var(--clr-danger)",
+                },
+                customBg: {
+                    "main-1": "var(--bg-main-1)",
+                    "main-2": "var(--bg-main-2)",
+                    btn: {
+                        1: "var(--bg-btn-1)",
+                        2: "var(--bg-btn-2)",
+                    },
                 },
             },
         },
