@@ -1,7 +1,8 @@
 import Logo from "@/assets/Logo.png";
-import Robo1 from "@/assets/onBoard/Robo Image.png";
-import Robo2 from "@/assets/onBoard/Robot Image.png";
-import Robo3 from "@/assets/onBoard/Robot Img.png";
+import Robo1 from "@/assets/onBoard/Robo Image.webp";
+import Robo2 from "@/assets/onBoard/Robot Image.webp";
+import Robo3 from "@/assets/onBoard/Robot Img.webp";
+import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 function Onboarding() {
     type OnboardStateComponentInt = "splash" | "On-Boarding";
@@ -91,29 +92,52 @@ function Pages() {
         }
     };
     return (
-        <div className="h-svh bg-customBg-main-1">
-            <div className="flex justify-end p-4">
-                <button className="text-lg font-semibold text-txt-2">
+        <div className="min-h-svh overflow-hidden bg-customBg-main-1 p-2 max-sm:p-5">
+            <div className="flex justify-end">
+                <button className="p-4 text-lg font-semibold text-txt-2">
                     skip
                 </button>
             </div>
-            <div className="flex flex-col items-center justify-center gap-5 p-6">
+            <div className="flex h-full flex-col items-center justify-center gap-5 p-6">
                 <div>
                     <div>
                         <img src={Image} alt="img" />
                     </div>
-                    <div>
-                        <span>pointers</span>
-                    </div>
+                    <div>{/**  <span>pointers</span> */}</div>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-1">
-                    <h2 className="text-[40px] text-txt-1">{Title}</h2>
-                    <p className="text-center text-xs">{Description}</p>
+                    <h2 className="leadiing-[3em] text-center text-[clamp(1.5em,3.0vw,2.5em)] font-bold text-txt-1">
+                        {Title}
+                    </h2>
+                    <p className="w-[60%] text-center text-[clamp(0.8em,3.0vw,1em)] leading-[1.5em] text-txt-5">
+                        {Description}
+                    </p>
                 </div>
             </div>
-            <div>
-                <button onClick={() => ElementUpdater("prev")}>Prev</button>{" "}
-                <button onClick={() => ElementUpdater("next")}>Next</button>
+            <div className="relative p-4 pb-20">
+                {index === 0 || (
+                    <Button
+                        onClick={() => ElementUpdater("prev")}
+                        disabled={index === 0}
+                        className={`absolute left-3 w-[25%] p-4`}
+                    >
+                        Back
+                    </Button>
+                )}
+
+                {index === ELements.length - 1 ? (
+                    <Button className="absolute right-3 w-[25%] p-4">
+                        Continue
+                    </Button>
+                ) : (
+                    <Button
+                        className={`absolute right-3 w-[25%] p-4`}
+                        onClick={() => ElementUpdater("next")}
+                        disabled={index === ELements.length - 1}
+                    >
+                        Next
+                    </Button>
+                )}
             </div>
         </div>
     );

@@ -12,7 +12,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // Bind to all IPs
     port: 5173, 
-    allowedHosts : ["dd8c-169-150-218-34.ngrok-free.app"] 
+    allowedHosts : ["dd8c-169-150-218-34.ngrok-free.app","7f62-105-113-64-94.ngrok-free.app"] 
          // Specify your desired port (default is 5173)
   },
 })
